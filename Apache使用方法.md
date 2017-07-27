@@ -31,9 +31,9 @@
 	如果说以上操作对于建立一个单纯的站点来讲，完全可以满足所有的需求，但是，如果一台服务器上需要部署成多个项目，这就需要我们运维工程师配置虚拟主机了
 
 
-****
+**首先，编辑配置文件向当中添加虚拟主机**
 
-	首先，编辑配置文件向当中添加虚拟主机
+	
 
 	虚拟主机：
 
@@ -107,13 +107,14 @@
 
 
 
-****
+**有关apache反向代理的相关配置**
 
 
-	有关apache反向代理的相关配置
+	
 
 	Listen 8001
 	<VirtualHost *:8001>
+
 	    DocumentRoot "/var/www/html/a.com"
 	    ServerName www.a.com
 	    <Directory "/var/www/html/a.com">
@@ -156,3 +157,6 @@
 
 
 ![](http://i.imgur.com/Xt3MNDP.png)
+
+
+	反向代理成功
