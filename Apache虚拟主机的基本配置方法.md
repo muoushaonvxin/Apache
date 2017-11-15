@@ -1,0 +1,163 @@
+    vim /etc/httpd/conf/httpd.conf
+    
+    <VirtualHost 10.47.37.49:10001>
+       DocumentRoot "/web/mobile2.1/public"
+       <Directory "/web/mobile2.1/public">
+           Options Indexes MultiViews FollowSymLinks
+           Options -Indexes
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+         <Files ~ "\.(key|ht)$">
+            Order allow,deny
+            Deny from all
+          </Files>
+       </Directory>
+    </VirtualHost>
+    
+    <VirtualHost *:10003>
+       DocumentRoot "/web/mobile2.2/public"
+       <Directory "/web/mobile2.2/public">
+           Options Indexes MultiViews FollowSymLinks
+           Options -Indexes
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    <VirtualHost 10.47.37.49:10004>
+       DocumentRoot "/web/mobile2.5/public"
+       <Directory "/web/mobile2.5/public">
+           Options Indexes MultiViews FollowSymLinks
+           Options -Indexes
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    # NameVirtualHost 10.47.37.49:443
+    <VirtualHost 10.47.37.49:443>
+       DocumentRoot /web/mobile2.5/public
+       ErrorLog logs/hitrader-error_log
+        CustomLog logs/hitrader-access_log common
+        SSLEngine on
+        SSLProtocol all -SSLv2
+        SSLCipherSuite DEFAULT:!EXP:!SSLv2:!DES:!IDEA:!SEED:+3DES
+        SSLCertificateFile /etc/httpd/ssl.crt
+        SSLCertificateKeyFile /etc/httpd/hitrader.com.key
+        DirectoryIndex index.php
+      <Directory /web/mobile2.5/public>
+          Options all
+         AllowOverride all
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    
+    #NameVirtualHost 10.47.37.49:443
+    #<VirtualHost 10.47.37.49:443>
+    #   DocumentRoot /web/mobile2.5/public
+    #   ServerName m.hitrader.com
+    #   ErrorLog logs/hitrader-error_log
+    #    CustomLog logs/hitrader-access_log common
+    #    SSLEngine on
+    #    SSLProtocol all -SSLv2
+    #    SSLCipherSuite DEFAULT:!EXP:!SSLv2:!DES:!IDEA:!SEED:+3DES
+    #    SSLCertificateFile /etc/httpd/ssl.crt
+    #    SSLCertificateKeyFile /etc/httpd/hitrader.com.key
+    #    DirectoryIndex index.php
+    #  <Directory /web/mobile2.5/public>
+    #      Options all
+    #     AllowOverride all
+    #       Order allow,deny
+    #       Allow from all
+    #   </Directory>
+    #</VirtualHost>
+    
+    
+    #<VirtualHost 10.47.37.49:443>
+    #   DocumentRoot /web/rest
+    #   ServerName al.hitrader.com
+    #   ErrorLog logs/rest-error_log
+    #    CustomLog logs/rest-access_log common
+    #    SSLEngine on
+    #    SSLProtocol all -SSLv2
+    #    SSLCipherSuite DEFAULT:!EXP:!SSLv2:!DES:!IDEA:!SEED:+3DES
+    #    SSLCertificateFile /etc/httpd/ssl.crt
+    #    SSLCertificateKeyFile /etc/httpd/hitrader.com.key
+    #  <Directory /web/rest>
+    #      Options all
+    #     AllowOverride all
+    #       Order allow,deny
+    #       Allow from all
+    #   </Directory>
+    #</VirtualHost>
+    
+    NameVirtualHost 10.47.37.49:443
+    <VirtualHost 10.47.37.49:443>
+       DocumentRoot /web/rest
+       ErrorLog logs/rest-error_log
+        CustomLog logs/rest-access_log common
+        SSLEngine on
+        SSLProtocol all -SSLv2
+        SSLCipherSuite DEFAULT:!EXP:!SSLv2:!DES:!IDEA:!SEED:+3DES
+        SSLCertificateFile /etc/httpd/ssl.crt
+        SSLCertificateKeyFile /etc/httpd/hitrader.com.key
+      <Directory /web/rest>
+          Options all
+         AllowOverride all
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    Listen 10006
+    <VirtualHost *:10006>
+       DocumentRoot "/web/mobile2.6"
+        ErrorLog logs/2.6-error_log
+        CustomLog logs/2.6-access_log common
+       <Directory "/web/mobile2.6">
+           Options Indexes MultiViews FollowSymLinks
+           Options -Indexes
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    <VirtualHost 10.47.37.49:443>
+       DocumentRoot /web/mobile2.6
+       ErrorLog logs/2.6ssl-error_log
+        CustomLog logs/2.6ssl-access_log common
+        SSLEngine on
+        SSLProtocol all -SSLv2
+        SSLCipherSuite DEFAULT:!EXP:!SSLv2:!DES:!IDEA:!SEED:+3DES
+        SSLCertificateFile /etc/httpd/ssl.crt
+        SSLCertificateKeyFile /etc/httpd/hitrader.com.key
+        # SSLPassPhraseDialog exec:/etc/httpd/conf.d/ssl_pass.sh
+      <Directory /web/mobile2.6>
+          Options all
+         AllowOverride all
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    Listen 10007
+    <VirtualHost *:10007>
+       DocumentRoot "/web/mobile2.6_hitrader"
+        ErrorLog logs/2.6-error_log
+        CustomLog logs/2.6-access_log common
+       <Directory "/web/mobile2.6_hitrader">
+           Options Indexes MultiViews FollowSymLinks
+           Options -Indexes
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+       </Directory>
+    </VirtualHost>
+    
+    SSLPassPhraseDialog    exec:/etc/httpd/conf.d/ssl_pass.sh
