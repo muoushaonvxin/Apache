@@ -19,6 +19,7 @@
 
 #### 常用编译参数一览
 
+```shell
 ./configure //配置源代码树
 
 --prefix=/usr/local/apache2 //体系无关文件的顶级安装目录PREFIX ，也就Apache的安装目录。
@@ -141,7 +142,7 @@
 
 --with-iconv=PATH iconv的安装目录
 
-
+```
 
 #### apache的编译安装方法
 
