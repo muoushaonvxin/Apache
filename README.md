@@ -204,7 +204,7 @@
 [root@zhangyz php-5.6.31]# make install 
 ```
 
-编译安装完成之后的使用方法apache如何关联php在apache的配置文件里面添加如下配置
+#### 编译安装完成之后的使用方法apache如何关联php在apache的配置文件里面添加如下配置
 
 ```shell
 [root@zhangyz php-5.6.31]# vim /usr/local/apache2/conf/httpd.conf
