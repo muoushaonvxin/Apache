@@ -17,6 +17,8 @@
 --enable-mpms-shared=all
 ```
 
+<br>
+
 #### 常用编译参数一览
 
 ```shell
@@ -143,6 +145,8 @@
 --with-iconv=PATH iconv的安装目录
 
 ```
+
+<br>
 
 #### apache的编译安装方法
 
