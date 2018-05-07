@@ -1,7 +1,7 @@
 Apache的编译安装方法
 
 ```shell
-[root@os1 httpd-2.2.15]# ./configure --prefix=/usr/local/apache \
+[root@zhangyz httpd-2.2.15]# ./configure --prefix=/usr/local/apache \
 --sysconfdir=/etc/httpd/ \
 --enable-modules=all \
 --enable-mods-shared=all \
@@ -146,16 +146,16 @@ Apache的编译安装方法
 #### apache的编译安装方法
 
 ```shell
-[root@os1 httpd-2.2.15]# tar -xf apache-2.2.15.tar.gz
-[root@os1 httpd-2.2.15]# cd apache-2.2.15
-[root@os1 httpd-2.2.15]# ./configure --prefix=/usr/local/apache2 \
+[root@zhangyz httpd-2.2.15]# tar -xf apache-2.2.15.tar.gz
+[root@zhangyz httpd-2.2.15]# cd apache-2.2.15
+[root@zhangyz httpd-2.2.15]# ./configure --prefix=/usr/local/apache2 \
 --enable-mods-shared=most \
 --enable-so \
 --enable-rewrite \
 --enable-ssl \
 --with-mpm=worker
-[root@os1 httpd-2.2.15]# make
-[root@os1 httpd-2.2.15]# make install 
+[root@zhangyz httpd-2.2.15]# make
+[root@zhangyz httpd-2.2.15]# make install 
 ```
 
 #### php的编译安装方法
