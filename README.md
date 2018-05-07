@@ -143,7 +143,7 @@ Apache的编译安装方法
 
 
 
-#### apache + php的编译安装方法
+#### apache的编译安装方法
 
 ```shell
 [root@os1 httpd-2.2.15]# tar -xf apache-2.2.15.tar.gz
