@@ -54,3 +54,11 @@ LoadModule deflate_module modules/mod_deflate.so
 ```
 
 修改好后, 保存httpd.conf文件, 记得重启 apache, 在刷新浏览器看请求, 应该就生效了
+
+<IfModule mod_deflate.c>
+    SetOutputFilter DEFLATE
+    DeflateCompressionLevel 9
+    AddOutputFilter DEFLATE
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/x-JavaScript application/x-httpd-php
+    AddOutputFilter DEFLATE js css
+</IfModule>
