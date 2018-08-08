@@ -1,6 +1,10 @@
 
 Rewrite 规则可以对来访问的主机实现控制
 
+
+
+Apache要使用访问Rewrite规则来对访问服务器的请求做处理
+
 ```apache
 <VirtualHost *:81>
    RewriteEngine On 
