@@ -7,7 +7,7 @@
 
 ```shell
 [root@zhangyz ~]# cd /usr/local/src
-[root@zhangyz src]# wget wget http://mirrors.tuna.tsinghua.edu.cn/apache//apr/apr-1.6.3.tar.gz
-[root@zhangyz src]# wget wget http://mirrors.shu.edu.cn/apache//apr/apr-util-1.6.1.tar.gz
+[root@zhangyz src]# wget http://archive.apache.org/dist/apr/apr-1.4.5.tar.gz
+[root@zhangyz src]# wget http://archive.apache.org/dist/apr/apr-util-1.3.12.tar.gz
 [root@zhangyz src]# wget http://jaist.dl.sourceforge.net/project/pcre/pcre/8.10/pcre-8.10.zip
 ```
