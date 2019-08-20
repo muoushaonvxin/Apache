@@ -67,3 +67,15 @@
 [root@zhangyz src]# cd php-5.6.37
 [root@zhangyz php-5.6.37]# 
 ```
+
+6.配置php和apache关联
+
+```shell
+[root@zhangyz ~]# vim /usr/local/apache2.4.41/conf/httpd.conf
+
+Addtype application/x-httpd-php .php .phtml .phps
+<IfModule dir_module>
+    DirectoryIndex index.shtml index.html index.php
+    DirectoryIndex index.html
+</IfModule>
+```
