@@ -59,3 +59,10 @@
 [root@zhangyz httpd-2.4.41]# make install
 ```
 
+5.安装 php-5.6.37.tar.gz
+
+```shell
+[root@zhangyz src]# tar -xf php-5.6.37.tar.gz
+[root@zhangyz src]# cd php-5.6.37
+[root@zhangyz php-5.6.37]# 
+```
