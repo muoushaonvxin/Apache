@@ -31,3 +31,12 @@
 [root@zhangyz apr-util-1.3.12]# ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/bin/apr-1-config 
 [root@zhangyz apr-util-1.3.12]# make && make install
 ```
+
+3.安装 pcre-8.10.zip 
+
+```shell
+[root@zhangyz src]# unzip pcre-8.10.zip 
+[root@zhangyz cd]# cd pcre-8.10
+[root@zhangyz pcre-8.10]# ./configure --disable-shared --with-pic --prefix=/usr/local/pcre 
+[root@zhangyz pcre-8.10]# make && make install
+```
