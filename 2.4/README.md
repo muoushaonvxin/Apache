@@ -11,3 +11,14 @@
 [root@zhangyz src]# wget http://archive.apache.org/dist/apr/apr-util-1.3.12.tar.gz
 [root@zhangyz src]# wget http://jaist.dl.sourceforge.net/project/pcre/pcre/8.10/pcre-8.10.zip
 ```
+
+先将相关的关联包进行源码安装
+
+1.安装 apr-1.4.5.tar.gz
+
+```shell
+[root@zhangyz src]# tar -xf apr-1.4.5.tar.gz
+[root@zhangyz src]# cd apr-1.4.5
+[root@zhangyz apr-1.4.5]# ./configure --prefix=/usr/local/apr
+[root@zhangyz apr-1.4.5]# make && make install
+```
