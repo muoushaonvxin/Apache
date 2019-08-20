@@ -28,7 +28,8 @@
 ```shell
 [root@zhangyz src]# tar -xf apr-util-1.3.12.tar.gz
 [root@zhangyz src]# cd apr-util-1.3.12
-[root@zhangyz apr-util-1.3.12]# ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/bin/apr-1-config 
+[root@zhangyz apr-util-1.3.12]# ./configure --prefix=/usr/local/apr-util \
+> --with-apr=/usr/local/apr/bin/apr-1-config 
 [root@zhangyz apr-util-1.3.12]# make && make install
 ```
 
