@@ -46,7 +46,16 @@
 ```shell
 [root@zhangyz src]# tar -xf httpd-2.4.41.tar.gz
 [root@zhangyz src]# cd httpd-2.4.41
-[root@zhangyz httpd-2.4.41]# ./configure --prefix=/usr/local/apache2.4.41 --with-apr-util=/usr/local/apr-util/ --with-apr=/usr/local/apr --with-pcre=/usr/local/pcre/ --enable-mods-shared=most --enable-so --enable-rewrite --enable-ssl --with-mpm=worker
+[root@zhangyz httpd-2.4.41]# ./configure --prefix=/usr/local/apache2.4.41 \
+> --with-apr-util=/usr/local/apr-util/ 
+> --with-apr=/usr/local/apr 
+> --with-pcre=/usr/local/pcre/ 
+> --enable-mods-shared=most 
+> --enable-so 
+> --enable-rewrite 
+> --enable-ssl 
+> --with-mpm=worker
 [root@zhangyz httpd-2.4.41]# make
 [root@zhangyz httpd-2.4.41]# make install
 ```
+
